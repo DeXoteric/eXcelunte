@@ -53,6 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeCoinsLeftText: {fileID: 0}
   freeCoinsTimerText: {fileID: 0}
-  insertCoinText: {fileID: 0}
   addWillBePlayedText: {fileID: 0}
-  timeInMsToWaitForFreeCoin: 300000
+  timeInMsToWaitForFreeCoin: 60000

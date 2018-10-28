@@ -22,7 +22,10 @@ public class PlayButton : MonoBehaviour
         {
             sceneLoader.LoadGame();
             ulong freeCoinTimerStart = (ulong)DateTime.Now.Ticks;
-            PlayerPrefsManager.FreeCoinsTimer = freeCoinTimerStart.ToString();
+            if (PlayerPrefsManager.FreeCoins == 3)
+            {
+                PlayerPrefsManager.FreeCoinsTimer = freeCoinTimerStart.ToString();
+            }
             PlayerPrefsManager.FreeCoins -= 1;
         }
     }
