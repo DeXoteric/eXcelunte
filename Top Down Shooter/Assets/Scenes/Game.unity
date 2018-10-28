@@ -220,6 +220,16 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114172385532802946, guid: 7e17cba9957a8e140a693989b06e59ba,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114172385532802946, guid: 7e17cba9957a8e140a693989b06e59ba,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114615935480341582, guid: 7e17cba9957a8e140a693989b06e59ba,
         type: 2}
       propertyPath: m_havePropertiesChanged

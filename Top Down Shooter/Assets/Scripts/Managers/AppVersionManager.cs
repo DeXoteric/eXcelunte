@@ -15,7 +15,7 @@ public class AppVersionManager : MonoBehaviour
         if (!string.Equals(newAppVersion, currentAppVersion) && resetScore)
         {
             PlayerPrefs.DeleteKey(PlayerPrefsManager.HIGH_SCORE);
-
+            PlayerPrefs.DeleteKey(PlayerPrefsManager.BEST_TIME);
             resetScore = false;
         }
 

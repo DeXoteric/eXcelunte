@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private int freeCoins = 3;
 
     public int DoubleScoreMultiplier { get; set; }
+    public float Timer { get; set; }
 
     public bool IsOnMobile { get; private set; }
     public bool IsShieldEnabled { get; set; }

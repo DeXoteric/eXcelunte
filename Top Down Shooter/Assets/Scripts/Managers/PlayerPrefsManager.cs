@@ -10,6 +10,7 @@ public class PlayerPrefsManager : MonoBehaviour
     private const string AUDIO_ENABLED_INT = "isAudioEnabled";
 
     public const string HIGH_SCORE = "highScore";
+    public const string BEST_TIME = "bestTime";
 
     private const string APP_VERSION = "appVersion";
 
@@ -56,6 +57,12 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         get { return PlayerPrefs.GetInt(HIGH_SCORE, 0); }
         set { PlayerPrefs.SetInt(HIGH_SCORE, value); }
+    }
+
+    public static float BestTime
+    {
+        get { return PlayerPrefs.GetFloat(BEST_TIME, 0f); }
+        set { PlayerPrefs.SetFloat(BEST_TIME, value); }
     }
 
     public static string AppVersion
