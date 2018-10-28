@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerPrefsManager : MonoBehaviour
 {
@@ -12,9 +11,6 @@ public class PlayerPrefsManager : MonoBehaviour
     public const string HIGH_SCORE = "highScore";
 
     private const string APP_VERSION = "appVersion";
-
-    private const string FREE_COINS = "freeCoins";
-    private const string FREE_COINS_TIMER = "freeCoinsTimer";
 
     private void Awake()
     {
@@ -62,17 +58,5 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         get { return PlayerPrefs.GetString(APP_VERSION, "0"); }
         set { PlayerPrefs.SetString(APP_VERSION, value); }
-    }
-
-    public static int FreeCoins
-    {
-        get { return PlayerPrefs.GetInt(FREE_COINS, GameManager.instance.GetFreeCoins()); }
-        set { PlayerPrefs.SetInt(FREE_COINS, value); }
-    }
-
-    public static string FreeCoinsTimer
-    {
-        get { return PlayerPrefs.GetString(FREE_COINS_TIMER, DateTime.Now.Ticks.ToString()); }
-        set { PlayerPrefs.SetString(FREE_COINS_TIMER, value); }
     }
 }

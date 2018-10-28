@@ -19,19 +19,19 @@ public class PlayerShootingController : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.instance.IsOnMobile || !GameManager.instance.IsOnMobile)
+        if (GameManager.instance.IsOnMobile)
         {
             StartCoroutine(FireContinuosly());
         }
     }
 
-    //private void Update()
-    //{
-    //    if (!GameManager.instance.IsOnMobile && GameManager.instance.GameStarted)
-    //    {
-    //        Fire();
-    //    }
-    //}
+    private void Update()
+    {
+        if (!GameManager.instance.IsOnMobile && GameManager.instance.GameStarted)
+        {
+            Fire();
+        }
+    }
 
     private void Fire()
     {

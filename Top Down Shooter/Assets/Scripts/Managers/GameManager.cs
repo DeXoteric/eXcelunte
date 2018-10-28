@@ -5,9 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     private int score;
-
-    private int freeCoins = 3;
-
+    
     public int DoubleScoreMultiplier { get; set; }
 
     public bool IsOnMobile { get; private set; }
@@ -67,10 +65,5 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
-    }
-
-    public int GetFreeCoins()
-    {
-        return freeCoins;
     }
 }

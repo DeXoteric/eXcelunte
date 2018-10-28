@@ -8,11 +8,4 @@ public class DeletePlayerPrefsScript : EditorWindow
     {
         PlayerPrefs.DeleteAll();
     }
-
-    [MenuItem("PlayerPrefs/Reset Free Coins and Timer")]
-    private static void ResetFreeCoinsAndTimer()
-    {
-        PlayerPrefs.DeleteKey("freeCoins");
-        PlayerPrefs.DeleteKey("freeCoinsTimer");
-    }
 }
