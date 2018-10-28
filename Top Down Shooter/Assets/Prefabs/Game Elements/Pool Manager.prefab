@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1582073477659740}
+  m_IsPrefabAsset: 1
+--- !u!1 &1582073477659740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4471642968227326}
+  - component: {fileID: 114634559645532030}
+  m_Layer: 0
+  m_Name: Pool Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4471642968227326
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1582073477659740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114634559645532030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1582073477659740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259fc8b4213b4f64ab5f6a966723a2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Player Laser
+    prefab: {fileID: 1370282732960524, guid: b0380e5d5bcecf944864cba9cb1b149c, type: 2}
+    size: 30
+  - tag: Enemy Laser 1
+    prefab: {fileID: 1288814278585420, guid: 872152655b07c29429e7e2228eddfc6d, type: 2}
+    size: 40
+  - tag: Enemy Bomb 1
+    prefab: {fileID: 1288814278585420, guid: 9206941569036794f9c0f185e3697b87, type: 2}
+    size: 10
+  - tag: Enemy 1
+    prefab: {fileID: 1249582665811612, guid: 34903cb46d137474ab922fee3a4abe0f, type: 2}
+    size: 10
+  - tag: Enemy 2
+    prefab: {fileID: 1249582665811612, guid: c7325cdc788a85f418ee99425216e88e, type: 2}
+    size: 10
+  - tag: Enemy Bomber 1
+    prefab: {fileID: 1249582665811612, guid: 3c95b0ff8570f1443aeb7386a6b05c2f, type: 2}
+    size: 10
+  - tag: Enemy UFO 1
+    prefab: {fileID: 1249582665811612, guid: 30ca709a5ccd42840a5601b0b15cd1da, type: 2}
+    size: 10

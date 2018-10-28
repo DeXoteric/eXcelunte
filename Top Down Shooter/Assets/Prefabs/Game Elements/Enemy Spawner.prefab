@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1551242885974854}
+  m_IsPrefabAsset: 1
+--- !u!1 &1551242885974854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4093756854489396}
+  - component: {fileID: 114333267600935830}
+  m_Layer: 0
+  m_Name: Enemy Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4093756854489396
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551242885974854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114333267600935830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551242885974854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff3343dee3f7634f9bfbebd4fe1b87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 1249582665811612, guid: 34903cb46d137474ab922fee3a4abe0f, type: 2}
+  - {fileID: 1249582665811612, guid: c7325cdc788a85f418ee99425216e88e, type: 2}
+  - {fileID: 1249582665811612, guid: 3c95b0ff8570f1443aeb7386a6b05c2f, type: 2}
+  - {fileID: 1249582665811612, guid: 30ca709a5ccd42840a5601b0b15cd1da, type: 2}
+  bossPrefabs: []
+  pathPrefabs:
+  - {fileID: 1507726841460018, guid: 268c6dc05df616b46a059175ceb69691, type: 2}
+  - {fileID: 1572869661340652, guid: 8632c6f92964e2743b0a46edc4c74f76, type: 2}
+  - {fileID: 1231710817021896, guid: 4192e8e45a020b44681b0d4bc02716f8, type: 2}
+  - {fileID: 1851377107972216, guid: 933ec848e000b2a4a98317ed6b1399ec, type: 2}
+  - {fileID: 1058426605513452, guid: 0787b3a98e4c12245b05ebefb502a249, type: 2}
+  - {fileID: 1860469576446996, guid: ed990522bee802f418ddf132ea71202d, type: 2}
+  - {fileID: 1371937870462462, guid: e4fd65f0c44fb4e4dbea1c3164f9502a, type: 2}
+  - {fileID: 1662565636687728, guid: e0a679c95271d4f4eaa8d16143474056, type: 2}
+  minTimeBetweenSpawns: 0.5
+  maxTimeBetweenSpawns: 0.8
+  enemiesToSpawn: 1
+  isLooping: 1
