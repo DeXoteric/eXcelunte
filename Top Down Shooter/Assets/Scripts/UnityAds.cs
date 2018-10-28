@@ -14,8 +14,7 @@ public class UnityAds : MonoBehaviour
     {
         if (Advertisement.IsReady("rewardedVideo"))
         {
-            //Advertisement.Show("rewardedVideo", new ShowOptions() { resultCallback = HandleAdResult });
-            sceneLoader.LoadGame(); //TODO remove for final build
+            Advertisement.Show("rewardedVideo", new ShowOptions() { resultCallback = HandleAdResult });
         }
     }
 
