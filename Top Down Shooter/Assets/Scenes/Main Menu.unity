@@ -826,7 +826,7 @@ Prefab:
     - target: {fileID: 114883536896746118, guid: 12b72308d6131734587a07cbeb92ddc6,
         type: 2}
       propertyPath: timeInMsToWaitForFreeCoin
-      value: 300000
+      value: 2700000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12b72308d6131734587a07cbeb92ddc6, type: 2}

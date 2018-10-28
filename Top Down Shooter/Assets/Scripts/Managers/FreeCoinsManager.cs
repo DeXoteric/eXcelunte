@@ -21,8 +21,12 @@ public class FreeCoinsManager : MonoBehaviour
 
         if (PlayerPrefsManager.FreeCoins == 0)
         {
-            freeCoinsTimerText.gameObject.SetActive(true);
             addWillBePlayedText.gameObject.SetActive(true);
+        }
+        else if (PlayerPrefsManager.FreeCoins < 3)
+        {
+            freeCoinsTimerText.gameObject.SetActive(true);
+            addWillBePlayedText.gameObject.SetActive(false);
         }
         else
         {
@@ -33,7 +37,6 @@ public class FreeCoinsManager : MonoBehaviour
 
     private void Update()
     {
-       
         UpdateFreeCoinsTimer();
     }
 
@@ -44,7 +47,7 @@ public class FreeCoinsManager : MonoBehaviour
 
     private void UpdateFreeCoinsTimer()
     {
-        if (PlayerPrefsManager.FreeCoins == 0)
+        if (PlayerPrefsManager.FreeCoins < 3)
         {
             freeCoinTimerStart = ulong.Parse(PlayerPrefsManager.FreeCoinsTimer);
             ulong timeDifference = (ulong)DateTime.Now.Ticks - freeCoinTimerStart;
@@ -54,15 +57,15 @@ public class FreeCoinsManager : MonoBehaviour
 
             if (timeLeft <= Mathf.Epsilon)
             {
-                PlayerPrefsManager.FreeCoins += 3;
+                PlayerPrefsManager.FreeCoins = GameManager.instance.GetFreeCoins();
                 UpdateFreeCoinsLeft();
             }
 
             string timerDisplay = "";
-            timerDisplay += ((int)timeLeft / 60).ToString() + "m ";
-            timerDisplay += ((int)timeLeft % 60).ToString("00") + "s";
+            timerDisplay += ((int)timeLeft / 60).ToString() + ":";
+            timerDisplay += ((int)timeLeft % 60).ToString("00");
 
-            freeCoinsTimerText.text = "Next free coins in: " + timerDisplay;
+            freeCoinsTimerText.text = "New free coins in: " + timerDisplay;
         }
         else
         {
