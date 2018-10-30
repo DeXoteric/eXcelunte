@@ -6,11 +6,9 @@ public class DisplayTimer : MonoBehaviour
     private TextMeshProUGUI timerText;
     private float startTime = 0;
     private float elapsedTime;
-    private PlayerHealthController player;
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerHealthController>();
         timerText = GetComponent<TextMeshProUGUI>();
         timerText.text = "0:00.00";
     }
@@ -21,7 +19,7 @@ public class DisplayTimer : MonoBehaviour
         {
             startTime = Time.time;
         }
-        else if (GameManager.instance.GameStarted && startTime != 0 && player.GetPlayerHealth() > 0)
+        else if (GameManager.instance.GameStarted && startTime != 0 && GameManager.instance.IsPlayerAlive)
         {
             elapsedTime = Time.time - startTime;
 

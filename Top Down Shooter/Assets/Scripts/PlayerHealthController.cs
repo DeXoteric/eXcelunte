@@ -6,6 +6,11 @@ public class PlayerHealthController : MonoBehaviour
     [SerializeField] private AudioClip deathSFX;
     [SerializeField] private GameObject deathVFX;
 
+    private void Start()
+    {
+        GameManager.instance.IsPlayerAlive = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
@@ -39,6 +44,7 @@ public class PlayerHealthController : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.Euler(0f, 0f, -90f));
         Destroy(explosion, 1f);
 
+        GameManager.instance.IsPlayerAlive = false;
         Destroy(gameObject);
     }
 

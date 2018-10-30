@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool IsTripleShotEnabled { get; set; }
 
     public bool GameStarted { get; set; }
+    public bool IsPlayerAlive { get; set; }
 
     private void Awake()
     {
