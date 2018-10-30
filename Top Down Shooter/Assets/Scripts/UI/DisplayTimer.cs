@@ -26,7 +26,7 @@ public class DisplayTimer : MonoBehaviour
             elapsedTime = Time.time - startTime;
 
             string minutes = ((int)elapsedTime / 60).ToString("0");
-            string seconds = (elapsedTime % 60).ToString("f2");
+            string seconds = (elapsedTime % 60).ToString("00.00");
 
             timerText.text = minutes + ":" + seconds;
 

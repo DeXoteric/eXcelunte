@@ -11,7 +11,7 @@ public class DisplayBestTime : MonoBehaviour
 
         float elapsedTime = PlayerPrefsManager.BestTime;
         string minutes = ((int)elapsedTime / 60).ToString("0");
-        string seconds = (elapsedTime % 60).ToString("f2");
+        string seconds = (elapsedTime % 60).ToString("00.00");
 
         bestTimeText.text = minutes + ":" + seconds;
     }
