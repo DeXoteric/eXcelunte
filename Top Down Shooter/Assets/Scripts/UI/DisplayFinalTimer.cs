@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class DisplayFinalTimer : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI finalTimeText;
+    [SerializeField] private TextMeshProUGUI newBestTimeText;
+
     private TextMeshProUGUI finalTimerText;
 
     private void Start()
@@ -19,9 +22,11 @@ public class DisplayFinalTimer : MonoBehaviour
         {
             PlayerPrefsManager.BestTime = GameManager.instance.Timer;
             PlayerPrefs.Save();
+            newBestTimeText.gameObject.SetActive(true);
         }
         else
         {
+            finalTimeText.gameObject.SetActive(true);
         }
     }
 }

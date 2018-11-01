@@ -51,6 +51,4 @@ public class EnemySpawner : MonoBehaviour
 
         return waypoints;
     }
-
-    
 }
